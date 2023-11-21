@@ -123,7 +123,7 @@ class ArticleController extends AbstractRestController implements ClassResourceI
         RequestHashCheckerInterface $requestHashChecker,
         SecurityCheckerInterface $securityChecker,
         bool $displayTabAll,
-        ?TokenStorageInterface $tokenStorage = null
+        TokenStorageInterface $tokenStorage = null
     ) {
         parent::__construct($viewHandler, $tokenStorage);
 
@@ -307,8 +307,8 @@ class ArticleController extends AbstractRestController implements ClassResourceI
             $search->addQuery(new MatchAllQuery());
         }
 
-        if (null !== $this->restHelper->getSortColumn() &&
-            $sortField = $this->getSortFieldName($this->restHelper->getSortColumn())
+        if (null !== $this->restHelper->getSortColumn()
+            && $sortField = $this->getSortFieldName($this->restHelper->getSortColumn())
         ) {
             $search->addSort(
                 new FieldSort($sortField, $this->restHelper->getSortOrder())

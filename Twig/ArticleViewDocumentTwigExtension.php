@@ -94,7 +94,7 @@ class ArticleViewDocumentTwigExtension extends AbstractExtension
     public function loadRecent(
         int $limit = ArticleViewDocumentRepository::DEFAULT_LIMIT,
         array $types = null,
-        ?string $locale = null,
+        string $locale = null,
         bool $ignoreWebspaces = false
     ): array {
         $excludeUuid = null;
@@ -131,14 +131,14 @@ class ArticleViewDocumentTwigExtension extends AbstractExtension
     /**
      * Loads similar articles with given parameters.
      *
-     * @throws ArticleInRequestNotFoundException
-     *
      * @return ArticleResourceItem[]
+     *
+     * @throws ArticleInRequestNotFoundException
      */
     public function loadSimilar(
         int $limit = ArticleViewDocumentRepository::DEFAULT_LIMIT,
         array $types = null,
-        ?string $locale = null,
+        string $locale = null,
         bool $ignoreWebspaces = false
     ): array {
         $uuid = null;

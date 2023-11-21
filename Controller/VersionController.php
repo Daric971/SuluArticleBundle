@@ -58,7 +58,7 @@ class VersionController extends AbstractRestController implements ClassResourceI
         DocumentManagerInterface $documentManager,
         ListRestHelperInterface $restHelper,
         UserRepositoryInterface $userRepository,
-        ?TokenStorageInterface $tokenStorage = null
+        TokenStorageInterface $tokenStorage = null
     ) {
         parent::__construct($viewHandler, $tokenStorage);
 

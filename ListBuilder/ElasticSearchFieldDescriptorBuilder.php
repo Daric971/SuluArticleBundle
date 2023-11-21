@@ -28,7 +28,7 @@ final class ElasticSearchFieldDescriptorBuilder
     /**
      * @var string
      */
-    private $sortField = null;
+    private $sortField;
 
     /**
      * @var string

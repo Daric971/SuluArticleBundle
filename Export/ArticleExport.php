@@ -59,7 +59,7 @@ class ArticleExport extends Export implements ArticleExportInterface
         $this->extensionManager = $extensionManager;
     }
 
-    public function export(string $locale, string $format = '1.2.xliff', ?OutputInterface $output = null): string
+    public function export(string $locale, string $format = '1.2.xliff', OutputInterface $output = null): string
     {
         $this->exportLocale = $locale;
         $this->format = $format;

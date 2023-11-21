@@ -74,11 +74,11 @@ class ArticleViewDocumentRepository
      * Finds recent articles for given parameters sorted by field `authored`.
      */
     public function findRecent(
-        ?string $excludeUuid = null,
+        string $excludeUuid = null,
         int $limit = self::DEFAULT_LIMIT,
         array $types = null,
-        ?string $locale = null,
-        ?string $webspaceKey = null
+        string $locale = null,
+        string $webspaceKey = null
     ): DocumentIterator {
         $search = $this->createSearch($limit, $types, $locale, $webspaceKey);
 
@@ -98,8 +98,8 @@ class ArticleViewDocumentRepository
         string $uuid,
         int $limit = self::DEFAULT_LIMIT,
         array $types = null,
-        ?string $locale = null,
-        ?string $webspaceKey = null
+        string $locale = null,
+        string $webspaceKey = null
     ): DocumentIterator {
         $search = $this->createSearch($limit, $types, $locale, $webspaceKey);
 
@@ -127,9 +127,9 @@ class ArticleViewDocumentRepository
      */
     private function createSearch(
         int $limit,
-        ?array $types = null,
-        ?string $locale = null,
-        ?string $webspaceKey = null
+        array $types = null,
+        string $locale = null,
+        string $webspaceKey = null
     ): Search {
         $search = $this->repository->createSearch();
 

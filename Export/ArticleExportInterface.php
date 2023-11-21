@@ -15,5 +15,5 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 interface ArticleExportInterface
 {
-    public function export(string $locale, string $format = '1.2.xliff', ?OutputInterface $output = null): string;
+    public function export(string $locale, string $format = '1.2.xliff', OutputInterface $output = null): string;
 }

@@ -81,9 +81,9 @@ abstract class AbstractArticleDataProviderResolver implements DataProviderResolv
         array $filters,
         array $propertyParameters,
         array $options = [],
-        ?int $limit = null,
+        int $limit = null,
         int $article = 1,
-        ?int $pageSize = null
+        int $pageSize = null
     ): DataProviderResult {
         $providerResult = $this->articleDataProvider->resolveResourceItems(
             $filters,

@@ -65,7 +65,7 @@ class ArticlePageController extends AbstractRestController implements ClassResou
         MetadataFactoryInterface $metadataFactory,
         FormFactoryInterface $formFactory,
         RequestHashCheckerInterface $requestHashChecker,
-        ?TokenStorageInterface $tokenStorage = null
+        TokenStorageInterface $tokenStorage = null
     ) {
         parent::__construct($viewHandler, $tokenStorage);
 

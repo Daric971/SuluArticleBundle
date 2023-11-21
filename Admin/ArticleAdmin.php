@@ -114,7 +114,7 @@ class ArticleAdmin extends Admin
         array $kernelBundles,
         array $articleTypeConfigurations,
         bool $versioningEnabled,
-        ?AutomationViewBuilderFactoryInterface $automationViewBuilderFactory = null
+        AutomationViewBuilderFactoryInterface $automationViewBuilderFactory = null
     ) {
         $this->viewBuilderFactory = $viewBuilderFactory;
         $this->securityChecker = $securityChecker;

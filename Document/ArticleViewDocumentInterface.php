@@ -267,8 +267,6 @@ interface ArticleViewDocumentInterface
     /**
      * Set authored date.
      *
-     * @param \DateTime $authored
-     *
      * @return $this
      */
     public function setAuthored(\DateTime $authored = null);
@@ -330,8 +328,6 @@ interface ArticleViewDocumentInterface
 
     /**
      * Set published.
-     *
-     * @param \DateTime $published
      *
      * @return $this
      */

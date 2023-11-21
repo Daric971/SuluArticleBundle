@@ -56,7 +56,7 @@ class ArticlePageNodeDefinition implements NodeDefinitionInterface
 
     public function getRequiredPrimaryTypeNames()
     {
-        return null;
+        return [];
     }
 
     public function getDefaultPrimaryType()
